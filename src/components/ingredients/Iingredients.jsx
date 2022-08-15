@@ -10,13 +10,12 @@ const Ingredients = () => {
   const renderList = ingredients.map((ingredient, index) => {
     return (
       <Link to={`/cocktail/${ingredient.strIngredient1}`} key={index}>
-        <div className="container" >
+        <div className="container">
           <div className="header">{ingredient.strIngredient1}</div>
         </div>
       </Link>
     );
   });
-
   return <>{renderList}</>;
 };
 

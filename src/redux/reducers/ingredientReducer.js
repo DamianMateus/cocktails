@@ -8,6 +8,8 @@ export const ingredientReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ActionTypes.SET_INGREDIENT:
       return { ...state, ingredients: payload };
+    case ActionTypes.FETCH_INGREDIENT:
+      return { ...state, ingredients: payload };
     case ActionTypes.SELECTED_INGREDIENT:
       return state;
     default:
