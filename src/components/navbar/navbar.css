@@ -1,0 +1,15 @@
+.dropdown {
+  z-index: 100;
+  border: none;
+}
+
+.dropdown:empty {
+  border: none;
+}
+
+.dropdown-row {
+  cursor: pointer;
+  text-align: center;
+  margin: 2px 0;
+  border: none;
+}

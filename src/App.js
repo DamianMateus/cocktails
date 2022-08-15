@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import IngredientsList from "./components/ingredients/IngredientList";
+import NavbarComp from "./components/navbar/NavbarComp";
+import Cocktail from "./components/cocktail/CocktailList";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <NavbarComp></NavbarComp>
+      <div className="container">
+        <Routes>
+          <Route path="/ingredients" element={<IngredientsList />} />
+          <Route path="/cocktail/:strIngredient1" element={<Cocktail />} />
+          <Route> 404 Not found! </Route>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
