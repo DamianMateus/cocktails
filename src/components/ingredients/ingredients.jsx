@@ -14,8 +14,6 @@ const Ingredients = () => {
     );
   });
 
-  console.log(ingredients, "ingredients detail");
-
   return <>{renderList}</>;
 };
 
