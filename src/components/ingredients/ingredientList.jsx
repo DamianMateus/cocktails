@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setIngredient } from "./../../redux/actions/ingredientAction";
+import { setIngredient } from "../../redux/actions/ingredientAction";
 import axios from "axios";
-import Ingredients from "./ingredients";
+import Ingredients from "./Iingredients";
 
 const IngredientsList = () => {
   const ingredients = useSelector((state) => state);
@@ -12,7 +12,7 @@ const IngredientsList = () => {
     const response = await axios
       .get("https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list")
       .catch((err) => {
-        console.log("ERROR", err);
+        console.log("ERROR ", err);
       });
     dispatch(setIngredient(response.data.drinks));
   };
@@ -20,10 +20,10 @@ const IngredientsList = () => {
   useEffect(() => {
     fetchIngredients();
   }, []);
-  //console.log(ingredients, "ingredients")
+
   return (
     <div className="header">
-      <h1>List</h1>
+      <h1>Ingredients list</h1>
       <Ingredients></Ingredients>
     </div>
   );

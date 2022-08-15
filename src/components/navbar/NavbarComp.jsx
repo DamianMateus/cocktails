@@ -18,7 +18,6 @@ export default function NavbarComp() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="/">Cocktails</Nav.Link>
             <Nav.Link href="/ingredients">Ingredients</Nav.Link>
           </Nav>
           <Form className="d-flex">

@@ -14,3 +14,12 @@ export const ingredientReducer = (state = initialState, { type, payload }) => {
       return state;
   }
 }
+
+export const selectedIngredientReducer = (state = {}, { type, payload }) => {
+  switch (type) {
+    case ActionTypes.SELECTED_INGREDIENT:
+      return { ...state, ...payload }
+    default:
+      return state;
+  }
+}
